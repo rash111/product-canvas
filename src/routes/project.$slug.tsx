@@ -26,7 +26,8 @@ export const Route = createFileRoute("/project/$slug")({
 });
 
 function ProjectPage() {
-  const { project: p } = Route.useLoaderData();
+  const data = Route.useLoaderData() as { project: Project };
+  const p = data.project;
 
   const sections = [
     { label: "Overview", value: p.overview },
