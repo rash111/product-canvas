@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, Maximize2, ExternalLink, Download, Tag } from "lucide-react";
-import { projects, profile } from "@/data/portfolio";
+import { projects, profile, type Project } from "@/data/portfolio";
 
 export const Route = createFileRoute("/project/$slug")({
   head: ({ params }) => {
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/project/$slug")({
       ],
     };
   },
-  loader: ({ params }) => {
+  loader: ({ params }): { project: Project } => {
     const project = projects.find((p) => p.slug === params.slug);
     if (!project) throw notFound();
     return { project };
