@@ -13,7 +13,7 @@ export const profile = {
   name: "Sarath Chandar Balakrishnan",
   title: "Aspiring Product Manager | SDET | Quality Engineering Professional",
   intro:
-    "7+ years building enterprise SaaS at Tekion — reading PRDs, pushing back on requirements, and shipping quality across the Automotive Retail Cloud platform. Now translating that product judgment into a full-time PM role.",
+    "7+ years building enterprise SaaS at Tekion - reading PRDs, pushing back on requirements, and shipping quality across the Automotive Retail Cloud platform. Now translating that product judgment into a full-time PM role.",
   email: "sarathchandarb@gmail.com",
   phone: "+91 96550 09981",
   location: "Coimbatore / Bengaluru, India",
@@ -45,7 +45,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "zomato-engagement",
-    title: "Zomato — Engagement & Retention Strategy",
+    title: "Zomato - Engagement & Retention Strategy",
     brand: "Zomato",
     category: "Growth & Retention",
     description:
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     pdf: zomatoAsset.url,
     gradient: "from-red-500 via-rose-500 to-orange-500",
     overview:
-      "Built a retention playbook for Zomato's Tier-1 user base — identifying churn signals, segmenting power users, and proposing interventions across the lifecycle.",
+      "Built a retention playbook for Zomato's Tier-1 user base - identifying churn signals, segmenting power users, and proposing interventions across the lifecycle.",
     problem:
       "Tier-1 users were showing declining order frequency after the initial honeymoon period, with rising acquisition costs and weakening LTV.",
     solution:
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     brand: "Swiggy",
     category: "Feature Adoption",
     description:
-      "Adoption strategy for the Scheduled Orders feature — discovery, awareness gaps, and behavioural nudges.",
+      "Adoption strategy for the Scheduled Orders feature - discovery, awareness gaps, and behavioural nudges.",
     tags: ["Adoption", "Food Tech", "UX", "Nudges"],
     pdf: swiggyAsset.url,
     gradient: "from-orange-500 via-amber-500 to-yellow-500",
@@ -78,14 +78,14 @@ export const projects: Project[] = [
     problem:
       "Users discovered Scheduled Orders late in the flow, post-decision, leading to low feature awareness and adoption.",
     solution:
-      "Move discovery upstream — contextual prompts on cart, weekly planner card on home, and office-hour notification nudges.",
+      "Move discovery upstream - contextual prompts on cart, weekly planner card on home, and office-hour notification nudges.",
     frameworks: ["Fogg Behavior Model", "Discovery → Consideration → Action funnel", "North-Star Metric"],
     outcomes:
       "Proposed funnel improvements estimated to grow scheduled-order share from <2% to 6-8% of weekly orders.",
   },
   {
     slug: "twitter-aarrr",
-    title: "AARRR Funnel — Twitter / X",
+    title: "AARRR Funnel - Twitter / X",
     brand: "Twitter / X",
     category: "Analytics & Metrics",
     description:
@@ -138,7 +138,7 @@ export const projects: Project[] = [
     problem:
       "Urban drivers waste 20+ minutes per trip looking for parking, with no reliable real-time inventory.",
     solution:
-      "Two-sided marketplace — lot operators list inventory, drivers reserve a slot and pay in-app; phased rollout starting with malls and offices.",
+      "Two-sided marketplace - lot operators list inventory, drivers reserve a slot and pay in-app; phased rollout starting with malls and offices.",
     frameworks: ["Lean Canvas", "JTBD", "MVP Cuts", "Two-Sided Marketplace Loops"],
     outcomes:
       "Validated problem with 12 user interviews; defined a 3-phase GTM and the success metrics for each phase.",
@@ -165,16 +165,16 @@ export const projects: Project[] = [
   },
   {
     slug: "vitafit",
-    title: "VitaFit — Effective Communication",
+    title: "VitaFit - Effective Communication",
     brand: "VitaFit",
     category: "PM Communication",
     description:
-      "Assignment on framing PM communication — clear narrative, stakeholder alignment, and decision write-ups.",
+      "Assignment on framing PM communication - clear narrative, stakeholder alignment, and decision write-ups.",
     tags: ["Communication", "Stakeholders", "Writing"],
     pdf: vitafitAsset.url,
     gradient: "from-lime-500 via-green-500 to-emerald-500",
     overview:
-      "Practiced PM communication via a VitaFit scenario — writing decisions, framing trade-offs, and aligning cross-functional stakeholders.",
+      "Practiced PM communication via a VitaFit scenario - writing decisions, framing trade-offs, and aligning cross-functional stakeholders.",
     problem:
       "PMs often lose stakeholder buy-in not because of weak ideas but because of weak framing and missing context.",
     solution:
@@ -189,12 +189,12 @@ export const projects: Project[] = [
     brand: "Tech 101",
     category: "PM Foundations",
     description:
-      "Assignment covering the technical foundations PMs need — APIs, data, systems, and how to work with engineering.",
+      "Assignment covering the technical foundations PMs need - APIs, data, systems, and how to work with engineering.",
     tags: ["APIs", "Systems", "PM Fundamentals"],
     pdf: tech101Asset.url,
     gradient: "from-indigo-500 via-blue-500 to-sky-500",
     overview:
-      "Worked through core technical concepts every PM should command — APIs, databases, system design basics, and engineering workflows.",
+      "Worked through core technical concepts every PM should command - APIs, databases, system design basics, and engineering workflows.",
     problem:
       "Many PMs struggle to scope or trade-off because they lack a working model of how their product is actually built.",
     solution:
@@ -212,7 +212,7 @@ export const experience = [
     duration: "Jan 2019 – Present",
     bullets: [
       "Review PRDs with PMs, engineers and designers before each release on the Automotive Retail Cloud (ARC) platform.",
-      "Own test strategy for Service module releases — flag risky scope early and push back on requirements that don't hold up.",
+      "Own test strategy for Service module releases - flag risky scope early and push back on requirements that don't hold up.",
       "Use Claude Code, Augment and Lovable to prototype automation and test ideas before committing engineering time.",
       "Built and maintain the regression suite (Selenium, Java, TypeScript) covering business-critical workflows.",
       "Promoted from Associate QA Engineer → Senior SDET across the journey.",

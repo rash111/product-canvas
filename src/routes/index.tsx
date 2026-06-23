@@ -26,13 +26,13 @@ import { profile, projects, experience, skills, certifications, categories } fro
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sarath Chandar Balakrishnan — Aspiring Product Manager" },
+      { title: "Sarath Chandar Balakrishnan - Aspiring Product Manager" },
       {
         name: "description",
         content:
-          "Portfolio of Sarath Chandar Balakrishnan — 7+ years in enterprise SaaS QA & SDET, transitioning into Product Management. PM case studies, certifications and experience.",
+          "Portfolio of Sarath Chandar Balakrishnan - 7+ years in enterprise SaaS QA & SDET, transitioning into Product Management. PM case studies, certifications and experience.",
       },
-      { property: "og:title", content: "Sarath Chandar Balakrishnan — Aspiring Product Manager" },
+      { property: "og:title", content: "Sarath Chandar Balakrishnan - Aspiring Product Manager" },
       {
         property: "og:description",
         content: "Product Management portfolio: case studies, projects, certifications, and PM-grade thinking.",
@@ -227,10 +227,10 @@ function Section({
 
 function About() {
   const highlights = [
-    "9+ years in enterprise SaaS QA & SDET — embedded with Product, Engineering and Design",
+    "9+ years in enterprise SaaS QA & SDET - embedded with Product, Engineering and Design",
     "Owned regression and test strategy for Tekion's Automotive Retail Cloud (ARC) Service module",
     "Strong product instinct: PRD reviews, edge-case hunting, user-workflow mapping",
-    "AI-First PM training at Airtribe — strategy, research, metrics, PRDs, prototyping",
+    "AI-First PM training at Airtribe - strategy, research, metrics, PRDs, prototyping",
     "Use Claude Code, Augment & Lovable to ship prototypes alongside the day job",
   ];
   return (
@@ -238,7 +238,7 @@ function About() {
       <div className="grid lg:grid-cols-5 gap-8">
         <div className="lg:col-span-3 space-y-4 text-muted-foreground leading-relaxed">
           <p>
-            I've spent 7+ years at <span className="text-foreground font-medium">Tekion</span> on the ARC platform —
+            I've spent 7+ years at <span className="text-foreground font-medium">Tekion</span> on the ARC platform -
             reading PRDs, pushing back on requirements that don't hold up, and mapping how dealerships actually use the
             product before features ship.
           </p>
@@ -249,7 +249,7 @@ function About() {
           </p>
           <p>
             I'm in the final stage of Airtribe's <span className="text-foreground font-medium">AI-First Product
-            Manager</span> program, where I've shipped the case studies on this page — from growth and retention to 0→1
+            Manager</span> program, where I've shipped the case studies on this page - from growth and retention to 0→1
             product, AARRR funnels and PM communication.
           </p>
         </div>
@@ -362,7 +362,7 @@ function Projects({
 }) {
   const cats = ["All", ...categories];
   return (
-    <Section id="projects" eyebrow="Projects" title="Product Management case studies." subtitle="Case studies from Airtribe's AI-First PM program — covering growth, retention, 0→1, analytics and PM communication. Click any card to read the full PDF in-app.">
+    <Section id="projects" eyebrow="Projects" title="Product Management case studies." subtitle="Case studies from Airtribe's AI-First PM program - covering growth, retention, 0→1, analytics and PM communication. Click any card to read the full PDF in-app.">
       <div className="flex flex-wrap gap-3 mb-8 items-center">
         <div className="relative flex-1 min-w-[220px] max-w-md">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -481,13 +481,13 @@ function Contact() {
     }
     setError(null);
     const subject = encodeURIComponent(`Portfolio contact from ${form.name}`);
-    const body = encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`);
+    const body = encodeURIComponent(`${form.message}\n\n- ${form.name} (${form.email})`);
     window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
     setSent(true);
   }
 
   return (
-    <Section id="contact" eyebrow="Contact" title="Let's talk product." subtitle="The fastest path is email — I usually reply within a day.">
+    <Section id="contact" eyebrow="Contact" title="Let's talk product." subtitle="The fastest path is email - I usually reply within a day.">
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="space-y-4">
           <a
