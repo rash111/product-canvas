@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Portfolio of Sarath Chandar Balakrishnan - 7+ years in enterprise SaaS QA & SDET, transitioning into Product Management. PM case studies, certifications and experience.",
+          "Portfolio of Sarath Chandar Balakrishnan, 8+ years in enterprise SaaS QA & SDET, transitioning into Product Management. PM case studies, certifications and experience.",
       },
       { property: "og:title", content: "Sarath Chandar Balakrishnan - Aspiring Product Manager" },
       {
@@ -185,7 +185,7 @@ function Hero() {
             <img src={profile.photo} alt={profile.name} className="w-full h-full object-cover" />
           </div>
           <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-2xl shadow-card px-4 py-3 hidden sm:block">
-            <div className="text-2xl font-bold text-gradient">7+ yrs</div>
+            <div className="text-2xl font-bold text-gradient">8+ yrs</div>
             <div className="text-xs text-muted-foreground">SaaS · QA · SDET</div>
           </div>
           <div className="absolute -top-4 -right-4 bg-card border border-border rounded-2xl shadow-card px-4 py-3 hidden sm:block">
@@ -238,7 +238,7 @@ function About() {
       <div className="grid lg:grid-cols-5 gap-8">
         <div className="lg:col-span-3 space-y-4 text-muted-foreground leading-relaxed">
           <p>
-            I've spent 7+ years at <span className="text-foreground font-medium">Tekion</span> on the ARC platform -
+            I've spent 8+ years at <span className="text-foreground font-medium">Tekion</span> on the ARC platform,
             reading PRDs, pushing back on requirements that don't hold up, and mapping how dealerships actually use the
             product before features ship.
           </p>
@@ -364,15 +364,6 @@ function Projects({
   return (
     <Section id="projects" eyebrow="Projects" title="Product Management case studies." subtitle="Case studies from Airtribe's AI-First PM program - covering growth, retention, 0→1, analytics and PM communication. Click any card to read the full PDF in-app.">
       <div className="flex flex-wrap gap-3 mb-8 items-center">
-        <div className="relative flex-1 min-w-[220px] max-w-md">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search projects, tags, brands…"
-            className="w-full pl-10 pr-3 py-2.5 rounded-lg bg-card border border-border focus:outline-none focus:ring-2 focus:ring-ring text-sm"
-          />
-        </div>
         <div className="flex flex-wrap gap-2">
           {cats.map((c) => (
             <button
@@ -445,16 +436,6 @@ function Certifications() {
                 <div className="text-sm text-primary">{c.org}</div>
                 <div className="text-xs text-muted-foreground mt-0.5">{c.date}</div>
                 <p className="text-sm text-muted-foreground mt-2">{c.detail}</p>
-                {c.link && (
-                  <a
-                    href={c.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-3 inline-flex items-center gap-1 text-sm text-primary hover:underline"
-                  >
-                    View credential <ExternalLink className="h-3.5 w-3.5" />
-                  </a>
-                )}
               </div>
             </div>
           </div>
