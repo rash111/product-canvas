@@ -13,7 +13,7 @@ export const profile = {
   name: "Sarath Chandar Balakrishnan",
   title: "Aspiring Product Manager | SDET | Quality Engineering Professional",
   intro:
-    "7+ years building enterprise SaaS at Tekion - reading PRDs, pushing back on requirements, and shipping quality across the Automotive Retail Cloud platform. Now translating that product judgment into a full-time PM role.",
+    "8+ years building enterprise SaaS at Tekion, reading PRDs, pushing back on requirements, and shipping quality across the Automotive Retail Cloud platform. Now translating that product judgment into a full-time PM role.",
   email: "sarathchandarb@gmail.com",
   phone: "+91 96550 09981",
   location: "Coimbatore / Bengaluru, India",
@@ -293,7 +293,7 @@ export const certifications = [
   {
     name: "AI-First Product Manager Program",
     org: "Airtribe",
-    date: "Final Stage · 2025",
+    date: "Final Stage · 2026",
     detail:
       "Product Strategy, User Research, Product Metrics, PRDs, AI Product Development, Rapid Prototyping.",
     link: "https://www.airtribe.live/",
