@@ -79,7 +79,7 @@ function ProjectPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid lg:grid-cols-3 gap-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid lg:grid-cols-3 gap-8">
         <aside className="space-y-5 lg:order-2">
           {sections.map((s) => (
             <div key={s.label} className="p-5 rounded-2xl bg-card border border-border shadow-card">
@@ -103,22 +103,35 @@ function ProjectPage() {
           <div className="rounded-2xl overflow-hidden bg-card border border-border shadow-card">
             <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-secondary/40">
               <div className="text-sm font-medium">Case Study PDF</div>
-              <a
-                href={p.pdf}
-                target="_blank"
-                rel="noreferrer"
-                className="text-xs inline-flex items-center gap-1 text-primary hover:underline"
-              >
-                Open in new tab <ExternalLink className="h-3 w-3" />
-              </a>
+              <div className="flex items-center gap-3">
+                <a
+                  href={p.pdf}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-xs inline-flex items-center gap-1 text-primary hover:underline"
+                >
+                  Open full page <ExternalLink className="h-3 w-3" />
+                </a>
+              </div>
             </div>
-            <div className="bg-muted">
-              <iframe
-                src={`${p.pdf}#view=FitH`}
-                title={p.title}
-                className="w-full h-[80vh] block"
-              />
-            </div>
+            <object
+              data={`${p.pdf}#view=FitH&toolbar=1`}
+              type="application/pdf"
+              className="w-full h-[85vh] block bg-muted"
+              aria-label={p.title}
+            >
+              <div className="p-8 text-center text-sm text-muted-foreground">
+                <p>Your browser can't display the PDF inline.</p>
+                <a
+                  href={p.pdf}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-hero text-primary-foreground"
+                >
+                  Open PDF in new tab <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </object>
           </div>
         </div>
       </div>

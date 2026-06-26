@@ -134,7 +134,7 @@ function Nav() {
 function Hero() {
   return (
     <section id="home" className="relative overflow-hidden bg-gradient-mesh">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
         <div className="animate-fade-up">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card border border-border text-xs font-medium text-muted-foreground shadow-soft">
             <Sparkles className="h-3.5 w-3.5 text-primary" />
@@ -144,10 +144,10 @@ function Hero() {
             Hi, I'm <span className="text-gradient">{profile.name.split(" ")[0]}</span>.
             <br />I build products with empathy, validate with data.
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-xl">{profile.intro}</p>
+          <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">{profile.intro}</p>
           <p className="mt-4 text-sm font-medium text-primary">{profile.title}</p>
 
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap gap-3 justify-center">
             <a
               href={profile.resume}
               target="_blank"
@@ -164,7 +164,7 @@ function Hero() {
             </a>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-5 text-sm text-muted-foreground">
+          <div className="mt-8 flex flex-wrap gap-5 text-sm text-muted-foreground justify-center">
             <a href={`mailto:${profile.email}`} className="inline-flex items-center gap-2 hover:text-primary">
               <Mail className="h-4 w-4" /> {profile.email}
             </a>
@@ -175,20 +175,20 @@ function Hero() {
               <MapPin className="h-4 w-4" /> {profile.location}
             </span>
           </div>
-        </div>
 
-        <div className="relative animate-fade-up">
-          <div className="absolute -inset-6 bg-gradient-hero opacity-30 blur-3xl rounded-full" />
-          <div className="relative aspect-square max-w-md mx-auto rounded-3xl overflow-hidden shadow-glow border-4 border-card">
-            <img src={profile.photo} alt={profile.name} className="w-full h-full object-cover" />
-          </div>
-          <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-2xl shadow-card px-4 py-3 hidden sm:block">
-            <div className="text-2xl font-bold text-gradient">8+ yrs</div>
-            <div className="text-xs text-muted-foreground">SaaS · QA · SDET</div>
-          </div>
-          <div className="absolute -top-4 -right-4 bg-card border border-border rounded-2xl shadow-card px-4 py-3 hidden sm:block">
-            <div className="text-2xl font-bold text-gradient">{projects.length}</div>
-            <div className="text-xs text-muted-foreground">PM case studies</div>
+          <div className="mt-12 flex flex-wrap gap-4 justify-center">
+            <div className="bg-card border border-border rounded-2xl shadow-card px-5 py-4">
+              <div className="text-3xl font-bold text-gradient">8+ yrs</div>
+              <div className="text-xs text-muted-foreground mt-1">SaaS · QA · SDET</div>
+            </div>
+            <div className="bg-card border border-border rounded-2xl shadow-card px-5 py-4">
+              <div className="text-3xl font-bold text-gradient">{projects.length}</div>
+              <div className="text-xs text-muted-foreground mt-1">PM case studies</div>
+            </div>
+            <div className="bg-card border border-border rounded-2xl shadow-card px-5 py-4">
+              <div className="text-3xl font-bold text-gradient">AI-First</div>
+              <div className="text-xs text-muted-foreground mt-1">PM Program · Airtribe</div>
+            </div>
           </div>
         </div>
       </div>
