@@ -1,24 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Download,
-  ArrowRight,
-  Github,
-  Linkedin,
-  Sparkles,
-  Briefcase,
-  GraduationCap,
-  Layers,
-  FolderKanban,
-  Award,
-  User as UserIcon,
-  Home as HomeIcon,
-  MessageSquare,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Download, ArrowRight, Github, Linkedin, Sparkles, Briefcase, GraduationCap, Layers, FolderKanban, Award, User as UserIcon, Hop as HomeIcon, MessageSquare } from "lucide-react";
 import { profile, projects, experience, skills, certifications, categories } from "@/data/portfolio";
 
 export const Route = createFileRoute("/")({
@@ -225,7 +208,7 @@ function Section({
 
 function About() {
   const highlights = [
-    "9+ years in enterprise SaaS QA & SDET - embedded with Product, Engineering and Design",
+    "8+ years in enterprise SaaS QA & SDET - embedded with Product, Engineering and Design",
     "Owned regression and test strategy for Tekion's Automotive Retail Cloud (ARC) Service module",
     "Strong product instinct: PRD reviews, edge-case hunting, user-workflow mapping",
     "AI-First PM training at Airtribe - strategy, research, metrics, PRDs, prototyping",
