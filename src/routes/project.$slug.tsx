@@ -64,7 +64,7 @@ function ProjectPage() {
       </header>
 
       <section className={`relative bg-gradient-to-br ${p.gradient} text-white overflow-hidden`}>
-        <div className="absolute inset-0 opacity-30 mix-blend-overlay" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, rgba(255,255,255,.5), transparent 50%), radial-gradient(circle at 80% 80%, rgba(0,0,0,.3), transparent 50%)" }} />
+        <div className="absolute inset-0 opacity-30 mix-blend-overlay pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, rgba(255,255,255,.5), transparent 50%), radial-gradient(circle at 80% 80%, rgba(0,0,0,.3), transparent 50%)" }} />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
           <div className="text-xs uppercase tracking-widest opacity-90">{p.category}</div>
           <h1 className="mt-2 text-3xl sm:text-5xl font-bold max-w-3xl">{p.title}</h1>
@@ -125,7 +125,7 @@ function ProjectPage() {
         </section>
 
         <section className={`relative overflow-hidden rounded-2xl p-8 sm:p-10 bg-gradient-to-br ${p.gradient} text-white shadow-card`}>
-          <div className="absolute inset-0 opacity-25 mix-blend-overlay" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, rgba(255,255,255,.6), transparent 50%)" }} />
+          <div className="absolute inset-0 opacity-25 mix-blend-overlay pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, rgba(255,255,255,.6), transparent 50%)" }} />
           <div className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
             <div className="flex items-start gap-4">
               <div className="h-12 w-12 rounded-xl bg-white/15 backdrop-blur grid place-items-center border border-white/20">
