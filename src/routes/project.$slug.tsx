@@ -1,5 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, Download, Tag, Target, Lightbulb, TrendingUp, Layers, FileText, ExternalLink } from "lucide-react";
+import { useState } from "react";
+import { ArrowLeft, Download, Tag, Target, Lightbulb, TrendingUp, Layers, FileText, Eye, X } from "lucide-react";
 import { projects, profile, type Project } from "@/data/portfolio";
 
 export const Route = createFileRoute("/project/$slug")({
@@ -28,6 +29,7 @@ export const Route = createFileRoute("/project/$slug")({
 function ProjectPage() {
   const data = Route.useLoaderData() as { project: Project };
   const p = data.project;
+  const [showPdf, setShowPdf] = useState(false);
 
   const insights = [
     { label: "Overview", value: p.overview, icon: Layers, accent: "from-sky-500 to-indigo-500" },
@@ -44,14 +46,13 @@ function ProjectPage() {
             <ArrowLeft className="h-4 w-4" /> Back to Projects
           </Link>
           <div className="flex items-center gap-2">
-            <a
-              href={p.pdf}
-              target="_blank"
-              rel="noreferrer"
+            <button
+              type="button"
+              onClick={() => setShowPdf(true)}
               className="hidden sm:inline-flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-lg bg-card border border-border hover:bg-secondary transition-colors"
             >
-              <ExternalLink className="h-3.5 w-3.5" /> Open PDF
-            </a>
+              <Eye className="h-3.5 w-3.5" /> View PDF
+            </button>
             <a
               href={p.pdf}
               download
@@ -144,14 +145,13 @@ function ProjectPage() {
               >
                 <Download className="h-4 w-4" /> Download PDF
               </a>
-              <a
-                href={p.pdf}
-                target="_blank"
-                rel="noreferrer"
+              <button
+                type="button"
+                onClick={() => setShowPdf(true)}
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/15 backdrop-blur border border-white/25 font-semibold hover:bg-white/25 transition-colors"
               >
-                <ExternalLink className="h-4 w-4" /> Open in new tab
-              </a>
+                <Eye className="h-4 w-4" /> View PDF here
+              </button>
             </div>
           </div>
         </section>
@@ -162,6 +162,31 @@ function ProjectPage() {
           <ArrowLeft className="h-4 w-4" /> Back to all projects
         </Link>
       </footer>
+
+      {showPdf && (
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex flex-col">
+          <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-background/95">
+            <div className="text-sm font-medium truncate">{p.title}</div>
+            <div className="flex items-center gap-2">
+              <a
+                href={p.pdf}
+                download
+                className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-gradient-hero text-primary-foreground"
+              >
+                <Download className="h-3.5 w-3.5" /> Download
+              </a>
+              <button
+                type="button"
+                onClick={() => setShowPdf(false)}
+                className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-card border border-border hover:bg-secondary"
+              >
+                <X className="h-3.5 w-3.5" /> Close
+              </button>
+            </div>
+          </div>
+          <iframe src={p.pdf} title={p.title} className="flex-1 w-full bg-white" />
+        </div>
+      )}
     </div>
   );
 }
