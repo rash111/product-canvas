@@ -1,5 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, Download, Tag, Target, Lightbulb, TrendingUp, Layers, FileText, ExternalLink } from "lucide-react";
+import { useState } from "react";
+import { ArrowLeft, Download, Tag, Target, Lightbulb, TrendingUp, Layers, FileText, Eye, X } from "lucide-react";
 import { projects, profile, type Project } from "@/data/portfolio";
 
 export const Route = createFileRoute("/project/$slug")({
