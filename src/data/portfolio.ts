@@ -127,7 +127,7 @@ export const projects: Project[] = [
     slug: "findmyride",
     title: "FindMyRide Spot",
     brand: "FindMyRide",
-    category: "0 → 1 Product",
+    category: "Product",
     description:
       "A 0→1 product concept for finding and reserving parking spots in dense urban areas.",
     tags: ["0 to 1", "Urban Mobility", "Marketplace"],

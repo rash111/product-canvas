@@ -184,7 +184,7 @@ function ProjectPage() {
               </button>
             </div>
           </div>
-          <iframe src={p.pdf} title={p.title} className="flex-1 w-full bg-white" />
+          <iframe src={p.pdf} title={p.title} className="flex-1 w-full bg-white" sandbox="allow-scripts allow-same-origin" />
         </div>
       )}
     </div>

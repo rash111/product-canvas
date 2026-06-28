@@ -133,8 +133,7 @@ function Hero() {
           <div className="mt-8 flex flex-wrap gap-3 justify-center">
             <a
               href={profile.resume}
-              target="_blank"
-              rel="noreferrer"
+              download
               className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-gradient-hero text-primary-foreground font-medium shadow-glow hover:-translate-y-0.5 transition-transform"
             >
               <Download className="h-4 w-4" /> Download Resume
@@ -210,7 +209,7 @@ function About() {
   const highlights = [
     "8+ years in enterprise SaaS QA & SDET - embedded with Product, Engineering and Design",
     "Owned regression and test strategy for Tekion's Automotive Retail Cloud (ARC) Service module",
-    "Strong product instinct: PRD reviews, edge-case hunting, user-workflow mapping",
+    "Strong product instinct: PRD reviews, edge-case hunting, gap hunting, user-workflow mapping, UATs",
     "AI-First PM training at Airtribe - strategy, research, metrics, PRDs, prototyping",
     "Use Claude Code, Augment & Lovable to ship prototypes alongside the day job",
   ];
