@@ -125,10 +125,6 @@ function ProjectPage() {
           </div>
         </section>
 
-        <section className={`relative overflow-hidden rounded-2xl p-8 sm:p-10 bg-gradient-to-br ${p.gradient} text-white shadow-card`}>
-          {/* moved below */}
-        </section>
-
         <section className="rounded-2xl bg-card border border-border shadow-card overflow-hidden">
           <div className="flex items-center justify-between px-5 py-3 border-b border-border bg-secondary/40">
             <div className="flex items-center gap-2 text-sm font-semibold">
