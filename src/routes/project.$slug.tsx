@@ -126,6 +126,41 @@ function ProjectPage() {
         </section>
 
         <section className={`relative overflow-hidden rounded-2xl p-8 sm:p-10 bg-gradient-to-br ${p.gradient} text-white shadow-card`}>
+          {/* moved below */}
+        </section>
+
+        <section className="rounded-2xl bg-card border border-border shadow-card overflow-hidden">
+          <div className="flex items-center justify-between px-5 py-3 border-b border-border bg-secondary/40">
+            <div className="flex items-center gap-2 text-sm font-semibold">
+              <FileText className="h-4 w-4 text-primary" /> Case Study Preview
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => setShowPdf(true)}
+                className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-card border border-border hover:bg-secondary transition-colors"
+              >
+                <Eye className="h-3.5 w-3.5" /> Fullscreen
+              </button>
+              <a
+                href={p.pdf}
+                download
+                className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-gradient-hero text-primary-foreground shadow-soft"
+              >
+                <Download className="h-3.5 w-3.5" /> Download
+              </a>
+            </div>
+          </div>
+          <iframe
+            src={`${p.pdf}#view=FitH`}
+            title={`${p.title} preview`}
+            className="w-full bg-white"
+            style={{ height: "80vh" }}
+            sandbox="allow-scripts allow-same-origin"
+          />
+        </section>
+
+        <section className={`relative overflow-hidden rounded-2xl p-8 sm:p-10 bg-gradient-to-br ${p.gradient} text-white shadow-card`}>
           <div className="absolute inset-0 opacity-25 mix-blend-overlay pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, rgba(255,255,255,.6), transparent 50%)" }} />
           <div className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
             <div className="flex items-start gap-4">
